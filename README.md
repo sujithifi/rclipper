@@ -1,6 +1,7 @@
 # Rclipper
 
-TODO: Write a gem description
+Rclipper is a polygon clipping tool implemented in pure ruby. The algorithm is based on "Efficient clipping of arbitrary polygons by Günther Greiner and Kai Hormann". Degeneracy fix by Erich L Foster and James Overfelt. Also thanks to Helder Correia (https://github.com/helderco/univ-polyclip)
+
 
 ## Installation
 
@@ -18,9 +19,12 @@ Or install it yourself as:
 
     $ gem install rclipper
 
-## Usage
+## Usage example
 
-TODO: Write usage instructions here
+a = [[0,0], [100,0], [100,50], [0,50]]
+b = [[0,25], [20,100], [75,25], [100,50], [100,0], [0,50]]
+
+c = Clipper::clip_polygon(a,b)
 
 ## Contributing
 
