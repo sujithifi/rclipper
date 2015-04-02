@@ -16,7 +16,7 @@ module Rclipper
       winding_num = 0
       infinity    = Vertex.new([Float::INFINITY, @y])
       polygon.each do |v|
-        winding_num +=1 if !v.intersect && Clipper::intersection(self, infinity, v, polygon.next(v.next))
+        winding_num +=1 if !v.intersect && Rclipper::intersection(self, infinity, v, polygon.next(v.next))
       end
       ( winding_num % 2 ) != 0
 

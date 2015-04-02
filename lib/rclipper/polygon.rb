@@ -70,7 +70,7 @@ module Rclipper
         clip_poly.each do |c|
           next if c.intersect
           begin
-            i, alpha_s, alpha_c = Clipper::intersection( s, self.next(s.next), c, clip_poly.next(c.next) )
+            i, alpha_s, alpha_c = Rclipper::intersection( s, self.next(s.next), c, clip_poly.next(c.next) )
             next unless i
             i_s = Vertex.new(i, alpha_s, true, false)
             i_c = Vertex.new(i, alpha_c, true, false)

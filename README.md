@@ -26,7 +26,7 @@ a = [[0,0], [100,0], [100,50], [0,50]]
 b = [[0,25], [20,100], [75,25], [100,50], [100,0], [0,50]]
 
 
-c = Clipper::clip_polygon(a,b)
+c = Rclipper::clip_polygon(a,b)
 
 ## Contributing
 
