@@ -21,13 +21,15 @@ Or install it yourself as:
 
 ## Usage example
 
+```ruby
+
+require 'rclipper'
+
 a = [[0,0], [100,0], [100,50], [0,50]]
-
 b = [[0,25], [20,100], [75,25], [100,50], [100,0], [0,50]]
-
-
 c = Rclipper::clip_polygon(a,b)
 
+```
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/rclipper/fork )
